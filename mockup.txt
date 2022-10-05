@@ -1,0 +1,23 @@
+Funktions:
+    - new/edit/delete User (= new Person)
+    - new/edit/delete Account
+    - new/edit/delete Transaction
+    - new/edit/delete Reccuring Transaction
+     
+    - get detailed Account report
+    - rough report for all Accounts 
+    
+detailed account report(timeframe?) of account
+    - total balance -|
+    - total spending |-> circle diagram(%)
+    - total income  -|
+    - total fixcost      |
+    - total variablecost |-> circle diagram(%)
+    - category circle diagram(%)
+        + subcategory cicle diagram(%)
+    - per week/moth coloum/line income/spending graph
+    - Accountreports(timeframe?)
+        + start balance
+        + end balance
+        + transaction list
+        

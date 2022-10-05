@@ -20,10 +20,16 @@ export class ECostType extends EnumMember {
     static readonly VARIABLECOSTS = new EnumMember(1, 'VariableCosts');
 }
 
+
+export class EInOut extends EnumMember {
+    static readonly INGOING = new EnumMember(0, 'Ingoing');
+    static readonly OUTGOING = new EnumMember(1, 'Outgoing');
+}
+
 export interface Person {
     firstName: string;
-    lastName: string;
-    birthday: Date;
+    lastName?: string;
+    birthday?: Date;
 
 }
 
@@ -43,18 +49,17 @@ export interface Category extends VBase{
 
 export interface TransactionBase extends VBase {
     date: Date;
-    fromIBAN: string;
-    fromBIC?: string;
-    toIBAN: string;
-    toBIC?: string;
+    client: AccountBase;
+    recipient: AccountBase;
     amount: number;
     referenz: string;
     recurring: EInterval;
 }
 
-export interface Transaction exctends TransactionBase {
+export interface Transaction extends TransactionBase {
+    inOut: EInOut;
     costType: ECostType;
-    category: Category
+    category: Category;
 }
 
 export interface AccountBase extends VBase {
